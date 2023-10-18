@@ -12,3 +12,26 @@
   max-width: 30%;
   max-height: 250px;
 }
+nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: #CC0000;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 100px;
+}
+
+body, html {
+padding-top: 50px;
+}
+
+
+
+
