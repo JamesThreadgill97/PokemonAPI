@@ -1,0 +1,48 @@
+.pokemon-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1rem; 
+  }
+  
+  .pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s;
+    width: 120px; /* Adjust this as per the size you need */
+    margin: 0.5rem;
+    text-align: center;
+  }
+  .pokemon-card p {
+    color: black;
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pokemon-name {
+    margin-top: 0.5rem;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-pokeball {
+    margin: 50px auto;
+    width: 50px;
+    height: 50px;
+    background-image: url('../../assets/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825789urzm0.png');
+    background-size: cover;
+    animation: spin 1s linear infinite;
+  }
+  

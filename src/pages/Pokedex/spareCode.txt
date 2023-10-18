@@ -1,0 +1,35 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+const Pokedex = () => {
+  const [pokemon, setPokemon] = useState([]);
+  const [sprites, setSprites] = useState([]);
+
+  useEffect(() => {
+    getPokemon();
+  }, []);
+
+  async function getPokemon() {
+
+    const result = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1292")
+    const pokemonData = await result.json();
+    setPokemon(pokemonData.results);
+    console.log(pokemonData.results);
+    const sprite = await fetch(`https://pokeapi.co/api/v2/pokemon/`)
+    const pokemonSprite = await sprite.json()
+    setSprites(pokemonSprite.data)
+  }
+
+  return (
+    <>
+      <h2>Pokemon</h2>
+      {pokemon.map((el) => (
+        <p>
+          <Link to={`/${el.name}`} key={el.name}>{el.name}<img src={el.name.sprites.front_default}/></Link>
+        </p>
+      ))}
+    </>
+  );
+};
+
+export default Pokedex;
