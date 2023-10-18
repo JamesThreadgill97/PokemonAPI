@@ -1,8 +1,16 @@
-# React + Vite
+# Pokedex App!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my first working Pokedex app! This is a react project built around the PokeAPI V2.
 
-Currently, two official plugins are available:
+This is a WIP so check back frequently.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Future Feature: 
+
+- Adding more generations (Currently 1-3)
+- Add Filter options
+- Create Team option
+
+Thanks for checking this out!
+James
+v1.0.0
