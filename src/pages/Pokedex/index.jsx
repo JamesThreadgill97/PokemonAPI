@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Pokedex.css";
+import { usePokedex } from "../../contexts";
 
 const Pokedex = () => {
+  const {offset, limit} = usePokedex();
   const [pokemonData, setPokemonData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getPokemon() {
       const result = await fetch(
-        "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=386"
+        `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`
       );
       const data = await result.json();
 
@@ -58,8 +60,12 @@ const Pokedex = () => {
       const color1 = typeColors[types[0].type.name] || "grey";
       const color2 = typeColors[types[1].type.name] || "grey";
       return `linear-gradient(to bottom right, ${color1}, ${color2})`;
+    } else if (types.length === 3) {
+      const color1 = typeColors[types[0].type.name] || "grey";
+      const color2 = typeColors[types[1].type.name] || "grey";
+      const color3 = typeColors[types[2].type.name] || "grey";
+      return `linear-gradient(to bottom right, ${color1}, ${color2}, ${color3})`;
     }
-    // Handle more than two types if needed (though Pokémon typically have 1 or 2 types)
     return "grey";
   }
 

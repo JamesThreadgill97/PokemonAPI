@@ -13,4 +13,11 @@ This is a WIP so check back frequently.
 
 Thanks for checking this out!
 James
-v1.0.0
+v1.0.1
+
+### Update 19/10/23
+- Added NavLinks to filter through API by generation, using a context for setting Offset & Limits
+- Bugs: 
+    - API content isn't fully working in the later generations - missing names, wrong styles, and therefore not all pokemon will play the screech correctly
+    - Still needs styling on NavLinks
+
