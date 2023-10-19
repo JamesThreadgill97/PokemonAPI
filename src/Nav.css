@@ -1,0 +1,50 @@
+.NavBar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between; 
+    align-items: center;
+    min-height: 10vh;
+    background: #CC0000;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    padding: 0 10px; 
+}
+
+.dropdown, .right {
+    flex: 1;
+}
+
+.pokemonLogoContainer {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonLogo {
+    max-width: 30%;
+    max-height: 250px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    border: 1px solid gray;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 100%; 
+    z-index: 2;
+    width: 200px; 
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

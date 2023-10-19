@@ -4,7 +4,7 @@ import "./Pokedex.css";
 import { usePokedex } from "../../Contexts";
 
 const Pokedex = () => {
-  const {offset, limit} = usePokedex();
+  const { offset, limit } = usePokedex();
   const [pokemonData, setPokemonData] = useState([]);
   const [loading, setLoading] = useState(true);
 

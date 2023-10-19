@@ -3,13 +3,22 @@ import "../../App.css";
 import { usePokedex } from "../../Contexts";
 
 function Home() {
-  const {setOffset, setLimit} = usePokedex();
+  const { setOffset, setLimit } = usePokedex();
   return (
     <div>
       <h1>Welcome to this Pokédex!</h1>
       <p>
         Chose the generation below and fetch the pokémon from that generation!
       </p>
+      <NavLink
+        to="/pokedex"
+        onClick={() => {
+          setOffset(0);
+          setLimit(1021);
+        }}
+      >
+        All
+      </NavLink>
       <NavLink
         to="/pokedex"
         onClick={() => {

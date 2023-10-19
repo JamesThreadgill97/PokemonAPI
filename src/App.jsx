@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Pokemon, Pokedex, Home } from "./pages";
+import { Pokemon, Pokedex, Home, RandomPokemon } from "./pages";
 import Nav from "./Nav";
 import { PokedexProvider } from './Contexts/index'
 
@@ -13,6 +13,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/pokedex">
               <Route index element={<Pokedex />} />
+              <Route path="random" element={<RandomPokemon />} />
               <Route path=":name" element={<Pokemon />} />
             </Route>
             <Route path="*" element={<h1>Error 404: Page not found</h1>} />

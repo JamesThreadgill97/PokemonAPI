@@ -1,17 +1,24 @@
 import { NavLink, Outlet } from "react-router-dom";
 import logo from './assets/International_Pokémon_logo.svg.png';
+import './Nav.css';
 
 function Nav() {
-  let activeStyle = {
-    textDecoration: "underline",
-    backgroundColor: "White",
-    color: "black",
-  };
   return (
     <>
-      <nav> <NavLink  to="/">
+      <nav className="NavBar"> 
+      <div className="dropdown">
+          <button>Menu</button>
+          <div className="dropdown-menu">
+            <p>
+              <NavLink to="/pokedex/random">Random</NavLink></p>
+          </div>
+        </div>
+        <div className="pokemonLogoContainer">
+        <NavLink  to="/">
         <img className="pokemonLogo" src={logo} alt="Pokemon Logo"/>
         </NavLink>
+        </div>
+        <div className="right"></div> {/* This is an empty spacer div */}
       </nav>
       <Outlet />
     </>
