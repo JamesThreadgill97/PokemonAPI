@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Pokemon, Pokedex, Home } from "./pages";
 import Nav from "./Nav";
-import { PokedexProvider } from './contexts/index'
+import { PokedexProvider } from './Contexts/index'
 
 function App() {
   return (

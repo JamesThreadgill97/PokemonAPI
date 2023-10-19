@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Pokedex.css";
-import { usePokedex } from "../../contexts";
+import { usePokedex } from "../../Contexts";
 
 const Pokedex = () => {
   const {offset, limit} = usePokedex();

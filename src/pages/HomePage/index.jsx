@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../../App.css";
-import { usePokedex } from "../../contexts";
+import { usePokedex } from "../../Contexts";
 
 function Home() {
   const {setOffset, setLimit} = usePokedex();
