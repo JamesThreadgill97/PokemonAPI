@@ -9,7 +9,7 @@ This is a WIP so check back frequently.
 You have two options for how to run this App:
 
 1: You can find the deployed app at the following link:
-    https://pokedex-react-app.onrender.com/
+    [Pokedex React App](https://pokedex-react-app.onrender.com/)
 This deployed version is linked to this repo, and so it will always been up to date.
 
 2. If you want to have this app on your local machine, you can. Just follow these stems
@@ -27,7 +27,7 @@ This deployed version is linked to this repo, and so it will always been up to d
    - `npm install` or `npm i`
    - This will download the required dependencies for this app to work.
    - Once successfully downloaded, you should see a node_modules folder, and a package-lock.json file appear.
-   - You can then run the command `npm run dev`, and the app should be booted up on your localhost, [localhost:5173] for example.
+   - You can then run the command `npm run dev`, and the app should be booted up on your localhost, [localhost:5173](https://localhost:5173) for example.
    - Navigate to this link in your browser, and the app should be running!
  
 
