@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useTypeColour } from "../../Contexts";
+
 import "./RandomPokemon.css";
 
 function RandomPokemon() {
   const { name } = useParams();
   const navigate = useNavigate();
   const [num, setNum] = useState(0); 
+  const getBackgroundForType = useTypeColour();
+
 
   const randomNumberInRange = (min, max) => { 
       return Math.floor(Math.random()  
@@ -24,6 +28,8 @@ function RandomPokemon() {
   const [pokemon, setPokemon] = useState({ sprites: {} });
   const officialArtwork =
     pokemon?.sprites?.other?.["official-artwork"]?.front_default;
+    const bgColor =
+    pokemon && pokemon.types ? getBackgroundForType(pokemon.types) : "grey";
 
   function playCry(url) {
     const audio = new Audio(url);
@@ -39,8 +45,8 @@ function RandomPokemon() {
   }, []);
 
   return (
-    <>
-      <h1>
+    <div style={{ background: bgColor, minHeight: "100vh" }}>
+        <h1>
         {pokemon.name ? capitalizeFirstLetter(pokemon.name) : "Loading..."}
       </h1>
       {officialArtwork && (
@@ -68,15 +74,15 @@ function RandomPokemon() {
                       `https://play.pokemonshowdown.com/audio/cries/${pokemon.name.toLowerCase()}.mp3`
                     )
                   }
-  
               />
             </div>
           </div>
         </>
       )}
       <button onClick={() => generateRandom()}>Random Encounter!</button>
-    </>
-  );
+      <button onClick={() => navigate("/pokedex")}>Go back to Pokedex</button>
+
+      </div> );
 }
 
 export default RandomPokemon;

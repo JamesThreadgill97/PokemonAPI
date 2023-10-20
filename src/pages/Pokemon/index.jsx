@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useTypeColour } from "../../Contexts";
 import "./Pokemon.css";
 function Pokemon() {
   const { name } = useParams();
   const navigate = useNavigate();
+  const getBackgroundForType = useTypeColour();
 
   useEffect(() => {
     fetchPokemon();
@@ -11,6 +13,8 @@ function Pokemon() {
   const [pokemon, setPokemon] = useState({ sprites: {} });
   const officialArtwork =
     pokemon?.sprites?.other?.["official-artwork"]?.front_default;
+  const bgColor =
+    pokemon && pokemon.types ? getBackgroundForType(pokemon.types) : "grey";
 
   const fetchPokemon = async () => {
     console.log({ name });
@@ -28,7 +32,7 @@ function Pokemon() {
   }
 
   return (
-    <>
+    <div style={{ background: bgColor, minHeight: "100vh" }}>
       <h1>
         {pokemon.name ? capitalizeFirstLetter(pokemon.name) : "Loading..."}
       </h1>
@@ -53,18 +57,17 @@ function Pokemon() {
                 src={pokemon.sprites.other["official-artwork"].front_shiny}
                 alt={pokemon.name}
                 onClick={() =>
-                    playCry(
-                      `https://play.pokemonshowdown.com/audio/cries/${pokemon.name.toLowerCase()}.mp3`
-                    )
-                  }
-  
+                  playCry(
+                    `https://play.pokemonshowdown.com/audio/cries/${pokemon.name.toLowerCase()}.mp3`
+                  )
+                }
               />
             </div>
           </div>
         </>
       )}
       <button onClick={() => navigate("/pokedex")}>Go back to Pokedex</button>
-    </>
+    </div>
   );
 }
 

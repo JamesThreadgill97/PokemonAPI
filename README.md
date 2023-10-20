@@ -22,3 +22,5 @@ v1.0.2
     - API content isn't fully working in the later generations - missing names, wrong styles, and therefore not all pokemon will play the screech correctly
     - Still needs styling on NavLinks
 
+### Update 20/10/23
+- Created background type dependant within /pokedex/:name path - including random
