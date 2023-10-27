@@ -23,3 +23,27 @@ text-decoration: none;
 color: white;
 }
 
+.pokedex-link {
+  display: inline-block;
+  margin: 8px 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #f2f2f2; /* Light grey background */
+color: #333; /* Dark text color */
+transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow */
+} 
+ 
+.pokedex-link:hover {
+  background-color: #e0e0e0; /* Slightly darker grey on hover */
+   transform: translateY(-2px); /* Slight upwards movement on hover */
+}
+
+.pokedex-link:active {
+  background-color: #d0d0d0; /* Even darker on active click */
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow size on click */
+  transform: translateY(0); /* Reset position on click */
+} 
+

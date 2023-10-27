@@ -11,6 +11,7 @@ function Home() {
         Chose the generation below and fetch the pokémon from that generation!
       </p>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(0);
@@ -20,6 +21,7 @@ function Home() {
         All
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(0);
@@ -29,6 +31,7 @@ function Home() {
         Gen I
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(151);
@@ -38,6 +41,7 @@ function Home() {
         Gen III
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(251);
@@ -47,6 +51,7 @@ function Home() {
         Gen III
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(386);
@@ -56,6 +61,7 @@ function Home() {
         Gen IV
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(493);
@@ -65,6 +71,7 @@ function Home() {
         Gen V
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(649);
@@ -74,6 +81,7 @@ function Home() {
         Gen VI
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(721);
@@ -83,6 +91,7 @@ function Home() {
         Gen VII
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(809);
@@ -92,6 +101,7 @@ function Home() {
         Gen VIII
       </NavLink>
       <NavLink
+        className="pokedex-link"
         to="/pokedex"
         onClick={() => {
           setOffset(905);
